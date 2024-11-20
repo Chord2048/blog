@@ -121,10 +121,6 @@ def process_file(file_path):
     # Combine new header with original content
     new_content = new_header_lines + lines[original_content_start:]
     
-    print(file_name)
-    print(new_header)
-    print("-----------------------------------")
-    print(new_content)
     # Write back to the file without changing the modification time
     try:
         with open(file_path, 'w', encoding='utf-8') as file:
