@@ -8,8 +8,8 @@ on:
 env:
   GIT_USER: Chord2048
   GIT_EMAIL: njuzj2048@gmail.com
-  THEME_REPO: ppoffice/hexo-theme-icarus
-  THEME_BRANCH: master
+  THEME_REPO: chord2048/theme-icarus
+  THEME_BRANCH: main
   DEPLOY_REPO: chord2048/chord2048.github.io
   DEPLOY_BRANCH: main
 
@@ -26,12 +26,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # - name: Checkout theme repo
-      #   uses: actions/checkout@v4
-      #   with:
-      #     repository: ${{ env.THEME_REPO }}
-      #     ref: ${{ env.THEME_BRANCH }}
-      #     path: themes/icarus
+      - name: Checkout theme repo
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.THEME_REPO }}
+          ref: ${{ env.THEME_BRANCH }}
+          path: themes/icarus
 
       - name: Checkout deploy repo
         uses: actions/checkout@v4
