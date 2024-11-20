@@ -1,5 +1,22 @@
 ---
+declare
+-A
+updated_header:
+([toc]="false"
+[categories]="-general"
+[title]="C++八股文"
+[update]="2024-11-21
+00:48:18"
+[date]="2024-11-21
+00:39:57.727558600"
+)
+---
+---
 title: Hello World
+date: 2024-11-20 00:41:31
+update: 2024-11-20 00:41:49
+categories:
+	-general
 toc: true
 ---
 
@@ -1062,4 +1079,15 @@ co_yield 挂起一个协程
 co_return 协程返回
 
 
+
+
+
+
+
+写一个脚本，自动执行以下步骤：
+
+1. 运行以上脚本
+2. 执行 git pull
+3. 执行 git commit -a -m {message}
+4. 执行 git push
 
