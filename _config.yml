@@ -102,6 +102,6 @@ theme: icarus
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git # 类型填git
-  repo: https://github.com/Chord2048/Chord2048.github.io.git # 你的Github仓库地址
+  repo: git@github.com:Chord2048/Chord2048.github.io.git # 你的Github仓库地址
   branch: main # 分支名称。默认填写 master 如果您使用的是 GitHub ，程序会尝试自动检测。
   message: # 提交信息可以自定义，不填的则默认为提交时间
