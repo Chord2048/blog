@@ -2,9 +2,9 @@
 title: Hello World
 date: 2024-11-20 00:41:31
 update: 2024-11-20 00:41:49
+toc: true
 categories:
   - general
-toc: true
 ---
 
 ## c++ 新特性

@@ -97,8 +97,7 @@ def process_file(file_path):
         "title": file_name,
         "date": creation_date,
         "update": modification_date,
-        "categories": ["-general"],  # Default categories
-        "toc": False  # Default toc value
+        "toc": True  # Default toc value
     }
 
     # Update header with existing values if present
@@ -106,7 +105,7 @@ def process_file(file_path):
 
     # Ensure all required keys are present
     if "categories" not in new_header or not new_header["categories"]:
-        new_header["categories"] = ["-general"]
+        new_header["categories"] = ["general"]
 
     if "toc" in new_header and isinstance(new_header["toc"], str):
         new_header["toc"] = new_header["toc"].lower() in ['true', '1', 'yes']
@@ -120,7 +119,7 @@ def process_file(file_path):
 
     # Combine new header with original content
     new_content = new_header_lines + lines[original_content_start:]
-    
+
     # Write back to the file without changing the modification time
     try:
         with open(file_path, 'w', encoding='utf-8') as file:
