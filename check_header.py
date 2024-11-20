@@ -1,6 +1,5 @@
 import os
 from datetime import datetime
-from tqdm import tqdm
 
 def get_file_creation_time(file_path):
     try:
@@ -52,7 +51,7 @@ def construct_header_lines(header_info):
         if key == "categories":
             header_lines.append("categories:\n")
             for category in value:
-                header_lines.append(f"\t-{category}\n")
+                header_lines.append(f"  - {category}\n")  # Use spaces for indentation
         else:
             header_lines.append(f"{key}: {value}\n")
     header_lines.append("---\n")
@@ -121,7 +120,11 @@ def process_file(file_path):
 
     # Combine new header with original content
     new_content = new_header_lines + lines[original_content_start:]
-
+    
+    print(file_name)
+    print(new_header)
+    print("-----------------------------------")
+    print(new_content)
     # Write back to the file without changing the modification time
     try:
         with open(file_path, 'w', encoding='utf-8') as file:
@@ -136,10 +139,10 @@ def process_file(file_path):
 def main():
     directory = "./source/_posts/"
     try:
-        files = [f for f in os.listdir(directory) if f.endswith((".md", ".txt"))]
-        for filename in tqdm(files, desc="Processing files"):
-            file_path = os.path.join(directory, filename)
-            process_file(file_path)
+        for filename in os.listdir(directory):
+            if filename.endswith(".md") or filename.endswith(".txt"):
+                file_path = os.path.join(directory, filename)
+                process_file(file_path)
     except Exception as e:
         print(f"Error listing files in directory {directory}: {e}")
 
