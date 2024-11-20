@@ -1,17 +1,4 @@
 ---
-declare
--A
-updated_header:
-([toc]="false"
-[categories]="-general"
-[title]="C++八股文"
-[update]="2024-11-21
-00:48:18"
-[date]="2024-11-21
-00:39:57.727558600"
-)
----
----
 title: Hello World
 date: 2024-11-20 00:41:31
 update: 2024-11-20 00:41:49
