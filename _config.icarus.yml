@@ -236,11 +236,11 @@ widgets:
         # Author's current location
         location: Earth
         # URL or path to the avatar image
-        avatar: 
+        avatar: https://chord-pic.oss-cn-shanghai.aliyuncs.com/202411211436136.jpg
         # Whether show the rounded avatar image
         avatar_rounded: false
         # Email address for the Gravatar
-        gravatar: njuzj2048@gmail.com
+        gravatar: 
         # URL or path for the follow button
         follow_link: https://github.com/chord2048
         # Links to be shown on the bottom of the profile widget
